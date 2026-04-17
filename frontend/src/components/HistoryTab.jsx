@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { getRecipes } from "../services/api";
 import RecipeCard from "./RecipeCard";

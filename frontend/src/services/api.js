@@ -1,11 +1,13 @@
-import axios from "axios";
+const API = "https://recipe-extractor-b8mz.onrender.com";
 
-const API = axios.create({
-  baseURL: "http://127.0.0.1:8000"
-});
+export const extractRecipe = async (url) => {
+  const res = await fetch(`${API}/extract`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ url }),
+  });
 
-export const extractRecipe = (url) =>
-  API.post("/extract", { url });
-
-export const getRecipes = () =>
-  API.get("/recipes");
+  return res.json();
+};

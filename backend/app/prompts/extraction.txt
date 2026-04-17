@@ -1,0 +1,3 @@
+Extract structured recipe JSON.
+
+Strict schema. No explanation.

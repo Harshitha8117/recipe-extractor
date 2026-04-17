@@ -1,0 +1,1 @@
+Merge recipes and generate combined shopping list.
